@@ -12,13 +12,22 @@ import { useUserStore } from '@/store'
 import { renderIcon } from '@/utils'
 
 const userStore = useUserStore()
+const router = useRouter()
 
 const options = [
   {
+    label: 'Hesabım',
+    key: 'profile',
+    icon: renderIcon('mdi:user', { size: '14px' })
+  },
+  {
+    type: 'divider'
+  },
+  {
     label: 'Oturumu Kapat',
     key: 'logout',
-    icon: renderIcon('mdi:exit-to-app', { size: '14px' }),
-  },
+    icon: renderIcon('mdi:exit-to-app', { size: '14px' })
+  }
 ]
 
 function handleSelect(key) {
@@ -32,6 +41,8 @@ function handleSelect(key) {
         $message.success('Oturum kapatıldı.')
       },
     })
+  }else if(key === 'profile'){
+    router.push('/profile')
   }
 }
 </script>
