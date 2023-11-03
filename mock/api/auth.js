@@ -1,13 +1,5 @@
 import { resolveToken } from '../utils'
-<<<<<<< Updated upstream
-
-const token = {
-  batu: 'admin',
-  editor: 'editor',
-}
-=======
 import { users } from './user'
->>>>>>> Stashed changes
 
 export default [
   {
@@ -18,11 +10,7 @@ export default [
         return {
           code: 0,
           data: {
-<<<<<<< Updated upstream
-            token: token[body.name],
-=======
             token: users[body.name].token,
->>>>>>> Stashed changes
           },
         }
       } else {

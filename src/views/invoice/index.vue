@@ -12,25 +12,6 @@
 </template>
 
 <script setup>
-<<<<<<< Updated upstream
-defineOptions({ name: 'FaturaListe' })
-const inputVal = ref('')
-const number = ref(0)
-
-onMounted(() => {
-  $message.success('onMounted')
-})
-
-onUnmounted(() => {
-  $message.error('onUnmounted')
-})
-
-onActivated(() => {
-  $message.info('onActivated')
-})
-onDeactivated(() => {
-  $message.warning('onDeactivated')
-=======
 import api from './api'
 import fatura from 'fatura'
 
@@ -51,6 +32,5 @@ onMounted(async () => {
     )
     console.log(portalToken.value)
   }
->>>>>>> Stashed changes
 })
 </script>

@@ -3,10 +3,10 @@ const Layout = () => import('@/layout/index.vue')
 export default {
   name: 'Profile',
   path: '/profile',
-  isHidden:true,
+  isHidden: true,
   component: Layout,
   redirect: '/profile/index',
-  children:[
+  children: [
     {
       name: 'ProfileIndex',
       path: 'index',
@@ -16,6 +16,6 @@ export default {
         icon: 'mdi:user',
         order: 0,
       },
-    }
-  ]
+    },
+  ],
 }

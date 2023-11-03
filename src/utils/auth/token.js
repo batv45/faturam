@@ -22,11 +22,7 @@ export async function refreshAccessToken() {
     return
   }
   const { time } = tokenItem
-<<<<<<< Updated upstream
-  // token生成或者刷新后30分钟内不执行刷新
-=======
   // Token ürettikten veya yenilemelerin ardından 30 dakika içinde yenilemeyi yürütmeyin
->>>>>>> Stashed changes
   if (Date.now() - time <= 1000 * 60 * 30) return
   try {
     const res = await api.refreshToken()

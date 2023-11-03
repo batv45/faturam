@@ -7,10 +7,7 @@ const userStore = useUserStore()
 
 <template>
   <CommonPage>
-    <n-avatar
-      :size="48"
-      :src="userStore.avatar"
-    />
-    <n-h3>{{userStore.name}}</n-h3>
+    <n-avatar :size="48" :src="userStore.avatar" />
+    <n-h3>{{ userStore.name }}</n-h3>
   </CommonPage>
 </template>
