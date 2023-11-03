@@ -1,5 +1,8 @@
+<<<<<<< Updated upstream
 const Layout = () => import('@/layout/index.vue')
 
+=======
+>>>>>>> Stashed changes
 export const basicRoutes = [
   {
     name: '404',

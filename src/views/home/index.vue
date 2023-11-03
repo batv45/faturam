@@ -6,7 +6,11 @@
           <n-avatar round :size="60" :src="userStore.avatar" />
           <div class="ml-20 flex-col">
             <span class="text-20 opacity-80">Hello, {{ userStore.name }}</span>
+<<<<<<< Updated upstream
             <span class="mt-4 opacity-50">Today's things are done today.</span>
+=======
+            <span class="mt-4 opacity-50">TOKEN: {{ userToken }}</span>
+>>>>>>> Stashed changes
           </div>
         </div>
 
@@ -44,6 +48,7 @@
         </footer>
       </n-card>
     </div>
+<<<<<<< Updated upstream
     <div class="mt-12 flex">
       <n-card title="project" segmented>
         <template #header-extra>
@@ -76,11 +81,19 @@
     <n-card class="mt-12" title="trend" segmented>
       <VChart :option="trendOption" class="h-480 w-full" autoresize />
     </n-card>
+=======
+    <div class="mt-10">
+      <n-card>
+        <pre>{{ userStore.userInfo }}</pre>
+      </n-card>
+    </div>
+>>>>>>> Stashed changes
   </AppPage>
 </template>
 
 <script setup>
 import { useUserStore } from '@/store'
+<<<<<<< Updated upstream
 import * as echarts from 'echarts/core'
 import { TooltipComponent, GridComponent, LegendComponent } from 'echarts/components'
 import { BarChart, LineChart, PieChart } from 'echarts/charts'
@@ -204,4 +217,10 @@ const skillsOption = {
     },
   ],
 }
+=======
+import { getToken } from '~/src/utils'
+
+const userStore = useUserStore()
+const userToken = getToken()
+>>>>>>> Stashed changes
 </script>

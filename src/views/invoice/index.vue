@@ -12,6 +12,7 @@
 </template>
 
 <script setup>
+<<<<<<< Updated upstream
 defineOptions({ name: 'FaturaListe' })
 const inputVal = ref('')
 const number = ref(0)
@@ -29,5 +30,27 @@ onActivated(() => {
 })
 onDeactivated(() => {
   $message.warning('onDeactivated')
+=======
+import api from './api'
+import fatura from 'fatura'
+
+defineOptions({ name: 'FaturaListe' })
+const inputVal = ref('')
+const number = ref(0)
+const interaktif = ref()
+
+const portalToken = ref()
+fatura.enableTestMode()
+
+onMounted(async () => {
+  interaktif.value = await api.getData()
+  if (interaktif.value.data.user && interaktif.value.data.pass) {
+    portalToken.value = await fatura.getToken(
+      interaktif.value.data.user,
+      interaktif.value.data.pass
+    )
+    console.log(portalToken.value)
+  }
+>>>>>>> Stashed changes
 })
 </script>

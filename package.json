@@ -38,6 +38,10 @@
     "axios": "^1.5.1",
     "dayjs": "^1.11.10",
     "echarts": "^5.4.3",
+<<<<<<< Updated upstream
+=======
+    "fatura": "^0.1.4",
+>>>>>>> Stashed changes
     "lodash-es": "^4.17.21",
     "md-editor-v3": "^4.7.0",
     "mockjs": "^1.1.0",

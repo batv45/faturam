@@ -23,6 +23,12 @@ export const useUserStore = defineStore('user', {
     role() {
       return this.userInfo?.role || []
     },
+<<<<<<< Updated upstream
+=======
+    user() {
+      return this.userInfo
+    },
+>>>>>>> Stashed changes
   },
   actions: {
     async getUserInfo() {
