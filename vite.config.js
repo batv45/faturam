@@ -30,6 +30,11 @@ export default defineConfig(({ command, mode }) => {
         ? {
             [VITE_BASE_API]: PROXY_CONFIG[VITE_BASE_API],
             '/api/v2': PROXY_CONFIG['/api/v2'],
+            '/api/earsiv': {
+              target: 'https://earsivportal.efatura.gov.tr',
+              changeOrigin: true,
+              secure: false
+            }
           }
         : undefined,
     },
